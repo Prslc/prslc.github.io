@@ -28,7 +28,7 @@
 <meta property="og:description" content="头文件和定义123456789101112#include&lt;iostream&gt;#include&lt;ctime&gt;#include&lt;cassert&gt;#include&lt;string&gt;using namespace std;struct BitreeNode&#123;	char data;	BitreeNode *lc,*rc;&#125;;typedef">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-02T06:59:17.000Z">
-<meta property="article:modified_time" content="2024-04-02T07:04:37.298Z">
+<meta property="article:modified_time" content="2024-04-02T09:12:15.787Z">
 <meta property="article:author" content="Prslc">
 <meta name="twitter:card" content="summary">
 
@@ -224,7 +224,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-04-02 14:59:17 / Modified: 15:04:37" itemprop="dateCreated datePublished" datetime="2024-04-02T14:59:17+08:00">2024-04-02</time>
+      <time title="Created: 2024-04-02 14:59:17 / Modified: 17:12:15" itemprop="dateCreated datePublished" datetime="2024-04-02T14:59:17+08:00">2024-04-02</time>
     </span>
 
   
@@ -237,6 +237,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><h2 id="头文件和定义"><a href="#头文件和定义" class="headerlink" title="头文件和定义"></a>头文件和定义</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cassert&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">BitreeNode</span>&#123;</span><br><span class="line">	<span class="type">char</span> data;</span><br><span class="line">	BitreeNode *lc,*rc;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> BitreeNode* Bitree;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <h2 id="创建树"><a href="#创建树" class="headerlink" title="创建树"></a>创建树</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//create</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreeCreate</span><span class="params">(Bitree &amp;t,string define,<span class="type">int</span> &amp;i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(define[i]==<span class="string">&#x27;*&#x27;</span>)&#123;</span><br><span class="line">		t=<span class="number">0</span>;</span><br><span class="line">		i++;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	t=<span class="keyword">new</span> BitreeNode;</span><br><span class="line">	t-&gt;data=define[i];</span><br><span class="line">	i++;</span><br><span class="line">	<span class="built_in">BitreeCreate</span>(t-&gt;lc,define,i);</span><br><span class="line">	<span class="built_in">BitreeCreate</span>(t-&gt;rc,define,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 

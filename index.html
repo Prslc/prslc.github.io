@@ -220,7 +220,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-04-02 16:57:52 / Modified: 17:02:43" itemprop="dateCreated datePublished" datetime="2024-04-02T16:57:52+08:00">2024-04-02</time>
+      <time title="Created: 2024-04-02 16:57:52 / Modified: 17:11:58" itemprop="dateCreated datePublished" datetime="2024-04-02T16:57:52+08:00">2024-04-02</time>
     </span>
 
   
@@ -241,271 +241,14 @@
 <p>用大、小写英文字母$P,Q,R…;p,q,r,…;p_1,q_2,r_3(i\leq1)$表示简单命题。</p>
 <p>用“T”（1）表示为真，用“F”（0）表示假</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">T = <span class="literal">true</span> = <span class="number">1</span>;</span><br><span class="line">F = <span class="literal">false</span> = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="命题分类："><a href="#命题分类：" class="headerlink" title="命题分类："></a>命题分类：</h2><ul>
-<li>简单命题（原子命题）</li>
-<li>复合命题</li>
-</ul>
-<h1 id="1-1-2-复合命题与联结词"><a href="#1-1-2-复合命题与联结词" class="headerlink" title="1.1.2 复合命题与联结词"></a>1.1.2 复合命题与联结词</h1><h2 id="1-复合命题的符号化"><a href="#1-复合命题的符号化" class="headerlink" title="1. 复合命题的符号化"></a>1. 复合命题的符号化</h2><h3 id="原则："><a href="#原则：" class="headerlink" title="原则："></a>原则：</h3><p>符号化后的真值必须与命题保持一致</p>
-<h3 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h3><ol>
-<li>分解复合命题为简单命题</li>
-<li>列出原命题与简单命题间的真值对应关系</li>
-<li>选择合适的联结词进行表达</li>
-</ol>
-<h2 id="2-否定联结词"><a href="#2-否定联结词" class="headerlink" title="2. 否定联结词"></a>2. 否定联结词</h2><p><strong>定义：</strong> 设p为命题，复合命题”非 P“（或 P 的否定）称为P的否定式$\neg$P 符号$\neg$称作否定联结词规定$\neg$P为真当且仅当 P 为假</p>
-<h2 id="3-合取联结词"><a href="#3-合取联结词" class="headerlink" title="3. 合取联结词"></a>3. 合取联结词</h2><p><strong>定义：</strong></p>
-<p>设P,Q为两个命题，复合命题“P并且Q”（或P与Q）称为P与Q的合取式，记作P$\wedge$Q，称作合取联结词。规定P$\wedge$Q为真当且仅当P与Q同时为真 。</p>
-<h2 id="4-析取联结词"><a href="#4-析取联结词" class="headerlink" title="4. 析取联结词"></a>4. 析取联结词</h2><p><strong>定义：</strong></p>
-<p>设P，Q为两个命题，复合命题P或Q称作P与Q的析取式，记作P$\vee$Q称作 析取联结词。规定P$\vee$Q为假当且仅当P与Q同时为假。</p>
-<h2 id="5-1-条件（蕴含）"><a href="#5-1-条件（蕴含）" class="headerlink" title="5.1 条件（蕴含）"></a>5.1 条件（蕴含）</h2><p>设：P , Q 为两个命题复合命题“如果 P , 则Q称作P与Q的条件式记作P$\to$Q，并称P是前件Q为蕴涵式的后件，$\to$称作条件联结词。</p>
-<p>规定： P $\to$Q 为假当且仅当p为真q为假。</p>
-<h2 id="5-2-条件（蕴含）"><a href="#5-2-条件（蕴含）" class="headerlink" title="5.2 条件（蕴含）"></a>5.2 条件（蕴含）</h2><ol>
-<li>$p\to q$的逻辑关系：Q为P的必要条件</li>
-<li>“如果P，则Q”有很多不同的表达方式：<ul>
-<li>若P，就Q</li>
-<li>只要P，就P</li>
-<li>P仅当Q</li>
-<li>只有Q才P</li>
-<li>除非Q, 才P 或 除非Q，否则非P。</li>
-</ul>
-</li>
-<li>当P为假时，$p \to q$恒为真，称为空证明</li>
-</ol>
-<h2 id="6-双条件（等价）"><a href="#6-双条件（等价）" class="headerlink" title="6. 双条件（等价）"></a>6. 双条件（等价）</h2><p><strong>定义：</strong></p>
-<p>设P，Q 为两个命题，复合命题“P当且仅当Q”称作P与Q的等价式，记作 $P \leftrightarrow Q$，$\leftrightarrow$ 称作 双条件联结词 。 <strong>规定</strong>： $P \leftrightarrow Q$为真当且仅当 P 与 Q 同时为真或同时为假。</p>
-<p>$P\leftrightarrow Q$的逻辑关系。</p>
-<p>$P与Q$互为充分必要条件。</p>
-<h2 id="7-联结词小结"><a href="#7-联结词小结" class="headerlink" title="7. 联结词小结"></a>7. 联结词小结</h2><table>
-<thead>
-<tr>
-<th>联结词</th>
-<th>记号</th>
-<th>复合命题</th>
-<th>记法</th>
-<th>读法</th>
-<th>真值结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>否定</td>
-<td>$\neg$</td>
-<td>P是不对的</td>
-<td>$\neg P$</td>
-<td>非P</td>
-<td>$\neg P$为真，当且仅当P为假</td>
-</tr>
-<tr>
-<td>合取</td>
-<td>$\wedge$</td>
-<td>P并且Q</td>
-<td>$P\wedge Q$</td>
-<td>P和取Q</td>
-<td>$P\wedge Q$为真，当且仅当P，Q同为真</td>
-</tr>
-<tr>
-<td>析取</td>
-<td>$\vee$</td>
-<td>P或者Q</td>
-<td>$P\vee Q$</td>
-<td>P析取Q</td>
-<td>$P\vee Q$为真，当且仅当P,Q中至少一个为真</td>
-</tr>
-<tr>
-<td>条件</td>
-<td>$\to$</td>
-<td>若P，则Q</td>
-<td>$P\to Q$</td>
-<td>P蕴含Q</td>
-<td>$P\to Q$为假，当且仅当P为真Q为假</td>
-</tr>
-<tr>
-<td>双条件</td>
-<td>$\leftrightarrow$</td>
-<td>P当且仅当Q</td>
-<td>$P\leftrightarrow Q$</td>
-<td>P等价于Q</td>
-<td>$P\leftrightarrow Q$为假,当且仅当P，Q同为真或假</td>
-</tr>
-</tbody></table>
-<h1 id="1-2-命题公式和等值演算"><a href="#1-2-命题公式和等值演算" class="headerlink" title="1.2 命题公式和等值演算"></a>1.2 命题公式和等值演算</h1><h1 id="命题公式"><a href="#命题公式" class="headerlink" title="命题公式"></a>命题公式</h1><h2 id="1-命题常项"><a href="#1-命题常项" class="headerlink" title="1. 命题常项"></a>1. 命题常项</h2><ul>
-<li>命题常项（命题常元）：简单命题。</li>
-<li>命题变项（命题变元）：真值可以变的陈述句。</li>
-<li>常项与变项均用$P，Q，R，..，P_i，Q_i，R_i，…，$等表示。</li>
-</ul>
-<h2 id="2-合成公式（公式）"><a href="#2-合成公式（公式）" class="headerlink" title="2. 合成公式（公式）"></a>2. 合成公式（公式）</h2><p><strong>定义：</strong></p>
-<p>命题变项用联结词和圆括号按一定的逻辑关系联结起来。</p>
-<ul>
-<li>单个命题变项和命题常项时合式公式，称为原子命题公式</li>
-<li>若A式合式公式，则（$\neg A$）也是合式公式</li>
-<li>若A，B式合式公式，则$(A\wedge B),(A\vee B),(A\to B),(A\leftrightarrow B)$也是</li>
-<li>只有有限次地应用（1）-（3）形成的符号串式合式公式</li>
-</ul>
-<h1 id="1-2-2-合成公式"><a href="#1-2-2-合成公式" class="headerlink" title="1.2.2 合成公式"></a>1.2.2 合成公式</h1><h2 id="1-公式的赋值"><a href="#1-公式的赋值" class="headerlink" title="1. 公式的赋值"></a>1. 公式的赋值</h2><p><strong>定义：</strong></p>
-<p>设$P_1,P_2,…,P_n$是出现在公式A中的全部命题变项，给$P_1，P_2,…,P_n$各指定一个真值，称为对A的一个赋值或解释。</p>
-<ul>
-<li>若使A为T，则称这组值为A的成真赋值。</li>
-<li>若使A为F，则称这组值为A的成假赋值。</li>
-</ul>
-<p><strong>几点说明：</strong></p>
-<ul>
-<li>A中仅出现$P_1,P_2,…,P_n$，给A赋值$a&#x3D;a_1a_2…a_n$是指$P_2&#x3D;a_2,…,p_n&#x3D;a_n,a_i&#x3D;$F或T，$a_i$之间不加标点符号。</li>
-<li>A中仅出现$p，q，r，…，$给A赋值$a_1a_2a_3 …$是指$p&#x3D;a_1,q&#x3D;a_2,r&#x3D;a_3…,a_i&#x3D;$F或T，$a_i$之间不加标点符号</li>
-<li>含$n$个命题变项的公式有$2^n$个赋值。</li>
-</ul>
-<h2 id="2-真值表"><a href="#2-真值表" class="headerlink" title="2. 真值表"></a>2. 真值表</h2><p><strong>定义：</strong></p>
-<p>将公式A在所有赋值下取值的情况列成表，称为A的真值表</p>
-<p><strong>步骤：</strong></p>
-<ul>
-<li>找出公式中所含的全部命题变现$P_1,P_2,…,P_n$（若无下角标则按字母顺序排列），列出$2^n$个全部赋值，从00…0开始，按二进制加法，每次加1，直至11…1为止。</li>
-<li>按从简到繁的顺序写出公式的各个子公式。</li>
-<li>对每个赋值依次计算各子公式的真值，直到最后计算楚公式的真值为止。</li>
-</ul>
-<h2 id="3-公式的类型"><a href="#3-公式的类型" class="headerlink" title="3. 公式的类型"></a>3. 公式的类型</h2><p><strong>定义</strong>：</p>
-<ul>
-<li>若A在它的任何赋值下均为真，则称A为重言式或永真式；</li>
-<li>若A在它的任何赋值下均为假，则称A为矛盾式或永假式；</li>
-<li>若A不是矛盾式，则称A是可满足式。</li>
-</ul>
-<p><strong>公式的类型：</strong></p>
-<table>
-<thead>
-<tr>
-<th>公式</th>
-<th>读法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$（p\vee q）to \neg r$</td>
-<td>非重言的可满足式</td>
-</tr>
-<tr>
-<td>$（q\to p）\vee q\to p$</td>
-<td>重言式</td>
-</tr>
-<tr>
-<td>$\neg(\neg p\vee q)\wedge q$</td>
-<td>矛盾式</td>
-</tr>
-</tbody></table>
-<p>注意：重言式是可满足式，但反之不真。</p>
-<p><strong>真值表的用途：</strong></p>
-<p>求出公式的全部成真赋值与成假赋值，判断公式的类型。</p>
-<h1 id="1-2-3-等值式的概念"><a href="#1-2-3-等值式的概念" class="headerlink" title="1.2.3 等值式的概念"></a>1.2.3 等值式的概念</h1><h2 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h2><p>若等价式$A\leftrightarrow B$是重言式，则称A与B等值记作$A\leftrightarrow B$，并称$A\leftrightarrow B$式等值式。</p>
-<p>1.2.4 基本等值式</p>
-<h1 id="1-2-4-基本等值式"><a href="#1-2-4-基本等值式" class="headerlink" title="1.2.4 基本等值式"></a>1.2.4 基本等值式</h1><h2 id="看前需知："><a href="#看前需知：" class="headerlink" title="看前需知："></a>看前需知：</h2><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>读法</th>
-<th>LaTeX</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$\neg$</td>
-<td>否定</td>
-<td>\neg</td>
-</tr>
-<tr>
-<td>$\wedge$</td>
-<td>合取</td>
-<td>\wedge</td>
-</tr>
-<tr>
-<td>$\vee$</td>
-<td>析取</td>
-<td>\vee</td>
-</tr>
-<tr>
-<td>$\to$</td>
-<td>条件</td>
-<td>\to</td>
-</tr>
-<tr>
-<td>$\leftrightarrow$</td>
-<td>双条件</td>
-<td>\leftrightarrow</td>
-</tr>
-<tr>
-<td>$\Leftrightarrow$</td>
-<td>等价</td>
-<td>\Leftrightarrow</td>
-</tr>
-</tbody></table>
-<h2 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h2><ul>
-<li>双重否定式<ul>
-<li>$\neg \neg A\Leftrightarrow A$</li>
-</ul>
-</li>
-<li>幂等律<ul>
-<li>$A\vee A\leftrightarrow A$</li>
-<li>$A\vee A \Leftrightarrow A$</li>
-</ul>
-</li>
-<li>交换律<ul>
-<li>$A\vee B \Leftrightarrow A$</li>
-<li>$A\vee B \Leftrightarrow B \vee A$</li>
-</ul>
-</li>
-<li>结合律<ul>
-<li>$(A\vee B）\vee C \Leftrightarrow A\vee(B\vee C)$</li>
-<li>$(A\wedge B)\wedge C \Leftrightarrow A \wedge (B \wedge C)$</li>
-</ul>
-</li>
-<li>分配律<ul>
-<li>$A\vee(B\wedge C)\Leftrightarrow (A \vee B)\wedge(A\vee C)$</li>
-<li>$A\wedge(B\vee C)\Leftrightarrow(A\wedge B)\vee(A\vee C)$</li>
-</ul>
-</li>
-<li>德摩根率<ul>
-<li>$\neg(A\vee B)\Leftrightarrow \neg A \wedge \neg B$</li>
-<li>$A\wedge(B\vee C)\Leftrightarrow A\vee \neg B$</li>
-</ul>
-</li>
-<li>吸收律<ul>
-<li>$A\vee(A\wedge B)\Leftrightarrow A$</li>
-<li>$A\wedge(A\vee B)\Leftrightarrow A$</li>
-</ul>
-</li>
-<li>零律<ul>
-<li>$A\vee1 \Leftrightarrow 1$</li>
-<li>$A \wedge 0\Leftrightarrow 0$</li>
-</ul>
-</li>
-<li>同一律<ul>
-<li>$A\vee 0 \Leftrightarrow A$</li>
-<li>$A \vee 1 \Leftrightarrow A$</li>
-</ul>
-</li>
-<li>排中律<ul>
-<li>$A\vee \neg A \Leftrightarrow 1$</li>
-</ul>
-</li>
-<li>矛盾律<ul>
-<li>$A \wedge \neg A \Leftrightarrow 0$</li>
-</ul>
-</li>
-<li>蕴含等值式<ul>
-<li>$A \to B \Leftrightarrow \neg A \vee B$</li>
-</ul>
-</li>
-<li>等价等值式<ul>
-<li>$A\leftrightarrow B \Leftrightarrow(A\to B)\wedge(B\to A)$</li>
-</ul>
-</li>
-<li>假言易位<ul>
-<li>$A\to B \Leftrightarrow \neg B\to \neg A$</li>
-</ul>
-</li>
-<li>等价否定等值式<ul>
-<li>$A\leftrightarrow B \Leftrightarrow \neg A \leftrightarrow \neg B$</li>
-</ul>
-</li>
-<li>归缪论<ul>
-<li>$(A\to B)\wedge(A\to \neg B)\leftrightarrow \neg A$</li>
-</ul>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/04/02/Discrete-mathematics/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -561,7 +304,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-04-02 14:59:17 / Modified: 15:04:37" itemprop="dateCreated datePublished" datetime="2024-04-02T14:59:17+08:00">2024-04-02</time>
+      <time title="Created: 2024-04-02 14:59:17 / Modified: 17:12:15" itemprop="dateCreated datePublished" datetime="2024-04-02T14:59:17+08:00">2024-04-02</time>
     </span>
 
   
@@ -575,20 +318,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="头文件和定义"><a href="#头文件和定义" class="headerlink" title="头文件和定义"></a>头文件和定义</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cassert&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">BitreeNode</span>&#123;</span><br><span class="line">	<span class="type">char</span> data;</span><br><span class="line">	BitreeNode *lc,*rc;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> BitreeNode* Bitree;</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建树"><a href="#创建树" class="headerlink" title="创建树"></a>创建树</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//create</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreeCreate</span><span class="params">(Bitree &amp;t,string define,<span class="type">int</span> &amp;i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(define[i]==<span class="string">&#x27;*&#x27;</span>)&#123;</span><br><span class="line">		t=<span class="number">0</span>;</span><br><span class="line">		i++;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	t=<span class="keyword">new</span> BitreeNode;</span><br><span class="line">	t-&gt;data=define[i];</span><br><span class="line">	i++;</span><br><span class="line">	<span class="built_in">BitreeCreate</span>(t-&gt;lc,define,i);</span><br><span class="line">	<span class="built_in">BitreeCreate</span>(t-&gt;rc,define,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//pre</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreePreOrder</span><span class="params">(Bitree t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(t)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;t-&gt;data;</span><br><span class="line">		<span class="built_in">BitreePreOrder</span>(t-&gt;lc);</span><br><span class="line">		<span class="built_in">BitreePreOrder</span>(t-&gt;rc);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//in</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreeInOrder</span><span class="params">(Bitree t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(t)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">BitreePreOrder</span>(t-&gt;lc);</span><br><span class="line">		cout&lt;&lt;t-&gt;data;</span><br><span class="line">		<span class="built_in">BitreePreOrder</span>(t-&gt;rc);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="后续遍历"><a href="#后续遍历" class="headerlink" title="后续遍历"></a>后续遍历</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//back</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreeBackOrder</span><span class="params">(Bitree t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(t)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;t-&gt;data;</span><br><span class="line">		<span class="built_in">BitreeBackOrder</span>(t-&gt;rc);</span><br><span class="line">		<span class="built_in">BitreeBackOrder</span>(t-&gt;lc);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Test</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreeTest</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Bitree t;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">BitreeCreate</span>(t, <span class="string">&quot;ab**c**&quot;</span>, i);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;PreOrder: &quot;</span>;</span><br><span class="line">	<span class="built_in">BitreePreOrder</span>(t);</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;BackOrder: &quot;</span>;</span><br><span class="line">    <span class="built_in">BitreeBackOrder</span>(t);</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;InOrder: &quot;</span>;</span><br><span class="line">    <span class="built_in">BitreeInOrder</span>(t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cassert&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">BitreeNode</span>&#123;</span><br><span class="line">	<span class="type">char</span> data;</span><br><span class="line">	BitreeNode *lc,*rc;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> BitreeNode* Bitree;</span><br><span class="line"></span><br><span class="line"><span class="comment">//create</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreeCreate</span><span class="params">(Bitree &amp;t,string define,<span class="type">int</span> &amp;i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(define[i]==<span class="string">&#x27;*&#x27;</span>)&#123;</span><br><span class="line">		t=<span class="number">0</span>;</span><br><span class="line">		i++;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	t=<span class="keyword">new</span> BitreeNode;</span><br><span class="line">	t-&gt;data=define[i];</span><br><span class="line">	i++;</span><br><span class="line">	<span class="built_in">BitreeCreate</span>(t-&gt;lc,define,i);</span><br><span class="line">	<span class="built_in">BitreeCreate</span>(t-&gt;rc,define,i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//pre</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreePreOrder</span><span class="params">(Bitree t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(t)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;t-&gt;data;</span><br><span class="line">		<span class="built_in">BitreePreOrder</span>(t-&gt;lc);</span><br><span class="line">		<span class="built_in">BitreePreOrder</span>(t-&gt;rc);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//in</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreeInOrder</span><span class="params">(Bitree t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(t)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">BitreePreOrder</span>(t-&gt;lc);</span><br><span class="line">		cout&lt;&lt;t-&gt;data;</span><br><span class="line">		<span class="built_in">BitreePreOrder</span>(t-&gt;rc);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//back</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreeBackOrder</span><span class="params">(Bitree t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(t)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;t-&gt;data;</span><br><span class="line">		<span class="built_in">BitreeBackOrder</span>(t-&gt;rc);</span><br><span class="line">		<span class="built_in">BitreeBackOrder</span>(t-&gt;lc);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Test</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BitreeTest</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Bitree t;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">BitreeCreate</span>(t, <span class="string">&quot;ab**c**&quot;</span>, i);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;PreOrder: &quot;</span>;</span><br><span class="line">	<span class="built_in">BitreePreOrder</span>(t);</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;BackOrder: &quot;</span>;</span><br><span class="line">    <span class="built_in">BitreeBackOrder</span>(t);</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;InOrder: &quot;</span>;</span><br><span class="line">    <span class="built_in">BitreeInOrder</span>(t);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">BitreeTest</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/04/02/Traversal-of-the-tree/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -650,7 +387,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-04-02 15:38:27" itemprop="dateModified" datetime="2024-04-02T15:38:27+08:00">2024-04-02</time>
+      <time title="Modified: 2024-04-02 17:12:24" itemprop="dateModified" datetime="2024-04-02T17:12:24+08:00">2024-04-02</time>
     </span>
 
   
@@ -665,29 +402,14 @@
     <div class="post-body" itemprop="articleBody">
           <h2 id="博客框架"><a href="#博客框架" class="headerlink" title="博客框架"></a>博客框架</h2><p><strong>Frame</strong>: Hexo</p>
 <p><strong>Theme:</strong> Next</p>
-<h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.skfwe.cn/p/%E5%8D%9A%E5%AE%A2%E5%88%87%E6%8D%A2%E5%88%B0stack-%E4%B8%BB%E9%A2%98/#%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6">https://www.skfwe.cn/p/%E5%8D%9A%E5%AE%A2%E5%88%87%E6%8D%A2%E5%88%B0stack-%E4%B8%BB%E9%A2%98/#%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6</a></li>
-<li><a target="_blank" rel="noopener" href="https://stack.jimmycai.com/">https://stack.jimmycai.com/</a></li>
-<li><a target="_blank" rel="noopener" href="https://vannyyuan.github.io/2020/10/29/script/%E5%9C%A8Hugo%E4%B8%AD%E4%BD%BF%E7%94%A8css%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E7%89%87%E4%BD%8D%E7%BD%AE/">https://vannyyuan.github.io/2020/10/29/script/%E5%9C%A8Hugo%E4%B8%AD%E4%BD%BF%E7%94%A8css%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E7%89%87%E4%BD%8D%E7%BD%AE/</a></li>
-<li><a target="_blank" rel="noopener" href="https://site.zhelper.net/Hugo/hugo-error/#_1#fromHistory">https://site.zhelper.net/Hugo/hugo-error/#_1#fromHistory</a></li>
-<li><a target="_blank" rel="noopener" href="https://cuttontail.blog/blog/create-a-wesite-using-github-pages-and-hugo/">https://cuttontail.blog/blog/create-a-wesite-using-github-pages-and-hugo/</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.skfwe.cn/p/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/#%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6">https://www.skfwe.cn/p/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/#%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6</a></li>
-<li><a target="_blank" rel="noopener" href="https://theme-next.org/">https://theme-next.org/</a></li>
-</ol>
-<h2 id="资源提供"><a href="#资源提供" class="headerlink" title="资源提供"></a>资源提供</h2><ul>
-<li><p>Svg：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/">https://www.iconfont.cn</a></p>
-</li>
-<li><p>review： <a target="_blank" rel="noopener" href="https://github.com/utterance">https://github.com/utterance</a></p>
-</li>
-<li><p>theme:<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a></p>
-</li>
-<li><p>Hugo: <a target="_blank" rel="noopener" href="https://gohugo.io/">https://gohugo.io</a></p>
-</li>
-<li><p>Hexo: <a target="_blank" rel="noopener" href="https://hexo.io/index.html">https://hexo.io/index.html</a></p>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/03/18/Blog%20Over/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
