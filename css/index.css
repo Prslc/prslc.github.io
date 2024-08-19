@@ -3335,11 +3335,12 @@ h1.page-title + .tag-cloud-list {
 #footer-wrap {
   position: relative;
   padding: 40px 20px;
-  color: var(--light-grey);
+  color: var(--font-color);
   text-align: center;
+  background-color: var(--global-bg);
 }
 #footer-wrap a {
-  color: var(--light-grey);
+  color: #1e50a2;
 }
 #footer-wrap a:hover {
   text-decoration: underline;
