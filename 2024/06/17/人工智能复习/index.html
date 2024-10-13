@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>人工智能（复习） | PrsTest Blog</title><meta name="keywords" content="复习,人工智能"><meta name="author" content="PrsTest"><meta name="copyright" content="PrsTest"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="人工智能（复习）"><meta name="application-name" content="人工智能（复习）"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="人工智能（复习）"><meta property="og:url" content="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/index.html"><meta property="og:site_name" content="PrsTest Blog"><meta property="og:description" content="偏差和方差 偏差(Bias)：在统计和机器学习中是预测值的期望（平均预测值）和真实值之间的差异。  方差(Variance)：在统计和机器学习中是一个衡量预测值分散程度的量。如果我们有一组预测值，我们可以首先计算这组预测值的均值，然后计算每个预测值与中国均值的差的平方，最后计算这些平方差的平均值，得"><meta property="og:locale" content="en"><meta property="og:image" content="https://prstest.github.io/images/top.png"><meta property="article:author" content="PrsTest"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://prstest.github.io/images/top.png"><meta name="description" content="偏差和方差 偏差(Bias)：在统计和机器学习中是预测值的期望（平均预测值）和真实值之间的差异。  方差(Variance)：在统计和机器学习中是一个衡量预测值分散程度的量。如果我们有一组预测值，我们可以首先计算这组预测值的均值，然后计算每个预测值与中国均值的差的平方，最后计算这些平方差的平均值，得"><link rel="shortcut icon" href="/images/Avatar.jpg"><link rel="canonical" href="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>人工智能（复习） | PrsTest Blog</title><meta name="keywords" content="复习,人工智能"><meta name="author" content="PrsTest"><meta name="copyright" content="PrsTest"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="人工智能（复习）"><meta name="application-name" content="人工智能（复习）"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="人工智能（复习）"><meta property="og:url" content="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/index.html"><meta property="og:site_name" content="PrsTest Blog"><meta property="og:description" content="偏差和方差   偏差(Bias)：在统计和机器学习中是预测值的期望（平均预测值）和真实值之间的差异。   方差(Variance)：在统计和机器学习中是一个衡量预测值分散程度的量。如果我们有一组预测值，我们可以首先计算这组预测值的均值，然后计算每个预测值与中国均值的差的平方，最后计算这些平方差的平均"><meta property="og:locale" content="en"><meta property="og:image" content="https://prstest.github.io/images/top.png"><meta property="article:author" content="PrsTest"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://prstest.github.io/images/top.png"><meta name="description" content="偏差和方差   偏差(Bias)：在统计和机器学习中是预测值的期望（平均预测值）和真实值之间的差异。   方差(Variance)：在统计和机器学习中是一个衡量预测值分散程度的量。如果我们有一组预测值，我们可以首先计算这组预测值的均值，然后计算每个预测值与中国均值的差的平方，最后计算这些平方差的平均"><link rel="shortcut icon" href="/images/Avatar.jpg"><link rel="canonical" href="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   linkPageTop: undefined,
   peoplecanvas: undefined,
   postHeadAiDescription: undefined,
@@ -207,23 +207,30 @@ setTimeout(function(){preloader.endLoading();},10000)
 if (true) {
   document.addEventListener('pjax:send', () => { preloader.initLoading() })
   document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">PrsTest Blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> Newest Comments</span></div><div class="aside-list"><span>loading...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Android/" style="font-size: 1.05rem;">Android<sup>1</sup></a><a href="/tags/Apatch/" style="font-size: 1.05rem;">Apatch<sup>1</sup></a><a href="/tags/C/" style="font-size: 1.05rem;">C++<sup>2</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>1</sup></a><a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 1.05rem;">人工智能<sup>1</sup></a><a href="/tags/%E5%A4%8D%E4%B9%A0/" style="font-size: 1.05rem;">复习<sup>5</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 1.05rem;">数据结构与算法<sup>3</sup></a><a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" style="font-size: 1.05rem;">离散数学<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">August 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">June 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">May 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">April 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%A4%8D%E4%B9%A0/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>复习</span></a><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>人工智能</span></a></span></div></div><h1 class="post-title" itemprop="name headline">人工智能（复习）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-06-17T15:57:02.000Z" title="Created 2024-06-17 23:57:02">2024-06-17</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-08-23T08:01:38.286Z" title="Updated 2024-08-23 16:01:38">2024-08-23</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">Word count:</span><span class="word-count" title="文章字数">5.6k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">Reading time:</span><span>17min</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为Home"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>Home</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/top.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/"><header><a href="/tags/%E5%A4%8D%E4%B9%A0/" tabindex="-1" itemprop="url">复习</a><a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" tabindex="-1" itemprop="url">人工智能</a><h1 id="CrawlerTitle" itemprop="name headline">人工智能（复习）</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">PrsTest</span><time itemprop="dateCreated datePublished" datetime="2024-06-17T15:57:02.000Z" title="Created 2024-06-17 23:57:02">2024-06-17</time><time itemprop="dateCreated datePublished" datetime="2024-08-23T08:01:38.286Z" title="Updated 2024-08-23 16:01:38">2024-08-23</time></header><h2 id="偏差和方差"><a href="#偏差和方差" class="headerlink" title="偏差和方差"></a>偏差和方差</h2><ul>
-<li><p>偏差(Bias)：在统计和机器学习中是预测值的期望（平均预测值）和真实值之间的差异。</p>
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">PrsTest Blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> Newest Comments</span></div><div class="aside-list"><span>loading...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Android/" style="font-size: 1.05rem;">Android<sup>1</sup></a><a href="/tags/Apatch/" style="font-size: 1.05rem;">Apatch<sup>1</sup></a><a href="/tags/C/" style="font-size: 1.05rem;">C++<sup>2</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>1</sup></a><a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 1.05rem;">人工智能<sup>1</sup></a><a href="/tags/%E5%A4%8D%E4%B9%A0/" style="font-size: 1.05rem;">复习<sup>5</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 1.05rem;">数据结构与算法<sup>3</sup></a><a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" style="font-size: 1.05rem;">离散数学<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">August 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">June 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">May 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">April 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%A4%8D%E4%B9%A0/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>复习</span></a><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>人工智能</span></a></span></div></div><h1 class="post-title" itemprop="name headline">人工智能（复习）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-06-17T15:57:02.000Z" title="Created 2024-06-17 23:57:02">2024-06-17</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-08-23T08:01:38.286Z" title="Updated 2024-08-23 16:01:38">2024-08-23</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">Word count:</span><span class="word-count" title="文章字数">5.6k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">Reading time:</span><span>17min</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为Home"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>Home</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/top.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/"><header><a href="/tags/%E5%A4%8D%E4%B9%A0/" tabindex="-1" itemprop="url">复习</a><a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" tabindex="-1" itemprop="url">人工智能</a><h1 id="CrawlerTitle" itemprop="name headline">人工智能（复习）</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">PrsTest</span><time itemprop="dateCreated datePublished" datetime="2024-06-17T15:57:02.000Z" title="Created 2024-06-17 23:57:02">2024-06-17</time><time itemprop="dateCreated datePublished" datetime="2024-08-23T08:01:38.286Z" title="Updated 2024-08-23 16:01:38">2024-08-23</time></header><h2 id="偏差和方差">偏差和方差</h2>
+<ul>
+<li>
+<p>偏差(Bias)：在统计和机器学习中是预测值的期望（平均预测值）和真实值之间的差异。</p>
 </li>
-<li><p>方差(Variance)：在统计和机器学习中是一个衡量预测值分散程度的量。如果我们有一组预测值，我们可以首先计算这组预测值的均值，然后计算每个预测值与中国均值的差的平方，最后计算这些平方差的平均值，得到的就是这组预测值的方差。更高的方差意味着预测值在其均值附近的分散程度更高。</p>
+<li>
+<p>方差(Variance)：在统计和机器学习中是一个衡量预测值分散程度的量。如果我们有一组预测值，我们可以首先计算这组预测值的均值，然后计算每个预测值与中国均值的差的平方，最后计算这些平方差的平均值，得到的就是这组预测值的方差。更高的方差意味着预测值在其均值附近的分散程度更高。</p>
 </li>
 </ul>
 <blockquote>
 <p>偏差衡量的是模型的准确性，而方差衡量的是模型的稳定性。</p>
 </blockquote>
 <ol>
-<li><p>低偏差，低方差：在这种情况下，模型的预测结果大部分都非常接近真实的模式，而且每次训练得到的模型之间的差别也非常小。这意味着，模型既能准确的学习到数据的真实规律，也对数据的微小变化不敏感，因此模型的预测效果非常好。</p>
+<li>
+<p>低偏差，低方差：在这种情况下，模型的预测结果大部分都非常接近真实的模式，而且每次训练得到的模型之间的差别也非常小。这意味着，模型既能准确的学习到数据的真实规律，也对数据的微小变化不敏感，因此模型的预测效果非常好。</p>
 </li>
-<li><p>高偏差，低方差：在种情况下，虽然每次训练得到的模型之间的差别很小，但是他们离真实模型很远，这意味着模型并没有很好学习到数据的真实规律，即模型的偏差较大。但是、由于模型简单，对数据的微小变化不敏感，因此模型的方差很小。</p>
+<li>
+<p>高偏差，低方差：在种情况下，虽然每次训练得到的模型之间的差别很小，但是他们离真实模型很远，这意味着模型并没有很好学习到数据的真实规律，即模型的偏差较大。但是、由于模型简单，对数据的微小变化不敏感，因此模型的方差很小。</p>
 </li>
-<li><p>低偏差，高方差：在种情况下，虽然模型的预测结果大部分都非常接近真实模型，但是每次训练得到的模型之间的差别较大。这意味着，模型能准确地学习到数据的真实规律，但对数据的微小变化过于敏感，导致模型的稳定性较差，即模型的方差较大。</p>
+<li>
+<p>低偏差，高方差：在种情况下，虽然模型的预测结果大部分都非常接近真实模型，但是每次训练得到的模型之间的差别较大。这意味着，模型能准确地学习到数据的真实规律，但对数据的微小变化过于敏感，导致模型的稳定性较差，即模型的方差较大。</p>
 </li>
-<li><p>高偏差，高方差：在这种情况下，模型的预测结果即远离真实模型，同时每次训练的模型之间的差别也很大。这意味着，模型即没有很好地学习到数据的真实规律，又对数据的微小变化过于敏感，这种情况时我们最不希望看到的。</p>
+<li>
+<p>高偏差，高方差：在这种情况下，模型的预测结果即远离真实模型，同时每次训练的模型之间的差别也很大。这意味着，模型即没有很好地学习到数据的真实规律，又对数据的微小变化过于敏感，这种情况时我们最不希望看到的。</p>
 </li>
 </ol>
 <blockquote>
@@ -232,11 +239,14 @@ if (true) {
 <p><strong>低偏差、高方差</strong>：模型过于复杂，表现为过拟合，虽然在训练集上表现很好，但在测试集上表现不稳定。</p>
 <p><strong>高偏差、高方差</strong>：模型在准确性和稳定性上都存在问题，可能需要重新选择模型或调整数据和特征。</p>
 </blockquote>
-<h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>前馈神经网路：所有的信息都只向前传递，所以这种神经网络也被称为多层神经网络。是应用最广泛、发展最迅速的人工神经网络之一。</p>
+<h2 id="神经网络">神经网络</h2>
+<p>前馈神经网路：所有的信息都只向前传递，所以这种神经网络也被称为多层神经网络。是应用最广泛、发展最迅速的人工神经网络之一。</p>
 <p>递归神经网络：一种处理序列数据的深度学习模型。它通过引入循环结构，使得信息可以在网络内部进行传递和共享。</p>
-<h3 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h3><p>反向传播是一种用于训练神经网络的算法，它结合了最优化方法（梯度下降法）来更新神经网络种的权重和偏差，以最小化损失函数。</p>
+<h3 id="反向传播">反向传播</h3>
+<p>反向传播是一种用于训练神经网络的算法，它结合了最优化方法（梯度下降法）来更新神经网络种的权重和偏差，以最小化损失函数。</p>
 <p>反向传播首先执行前向传播，计算网络中每个节点的输出值，然后执行反向传播，计算损失函数值相对于每个参数的偏导数，即梯度。这些梯度信息被反馈给最优化方法，用于更新网络的权重和偏差，以逐步优化网络性能。反向传播是深度学习中的一个核心组成部分，对于训练多层神经网络至关重要。</p>
-<h2 id="机器学习方法"><a href="#机器学习方法" class="headerlink" title="机器学习方法"></a>机器学习方法</h2><ol>
+<h2 id="机器学习方法">机器学习方法</h2>
+<ol>
 <li>回归：回归算法用于建立两个或多个变量之间的关系模型，通过对数据进行拟合，预测一个或多个连续变量的值。回归算法的目标是找到一条最佳拟合曲线（直线、二次曲线），使得该曲线在训练数据上的误差最小化。常见的回归算法包括线性回归、岭回归和Lasso回归等。</li>
 <li>分类：分类算法用于将数据点划分打我不同的类别中，预测一个或多个离散变量的取值。常见的分类算法包括逻辑回归、决策树和支持向量机等。</li>
 <li>聚类：聚类算法用于将数据点分成不同的组，每个组包含相似的数据点，预测无标签数据集中的数据点所属的群组。聚类算法的目标是找到一种最佳的方式类划分数据点，使得同一组内的数据点相似度最高，不同组之间的1相似度最低。常见的聚类算法包括K均值聚类、层次聚类和DBSCAN等。</li>
@@ -244,9 +254,10 @@ if (true) {
 <blockquote>
 <p><strong>回归</strong>：线性回归、岭回归、Lasso回归</p>
 <p><strong>分类</strong>：逻辑回归、决策树、支持向量机</p>
-<p><strong>聚类</strong>：K均值聚类、层次聚类、DBSCAN </p>
+<p><strong>聚类</strong>：K均值聚类、层次聚类、DBSCAN</p>
 </blockquote>
-<h2 id="大数据的计算模式"><a href="#大数据的计算模式" class="headerlink" title="大数据的计算模式"></a>大数据的计算模式</h2><ol>
+<h2 id="大数据的计算模式">大数据的计算模式</h2>
+<ol>
 <li>批量计算(Batch Computing)：批量计算首先进行数据的存储，然后对存储的静态数据进行集中计算。Hadoop是典型的大数据批量计算架构，由HDFS分布式文件系统负责静态数据的存储，并通过Hadoop将计算逻辑分配到各数据节点进行数据计算和价值发现。</li>
 <li>流式计算(Steam Computing)：在流式计算中，无法确定数据到来的时刻和到来的顺序，也无法将全部数据存储起来。因此，不再进行流式数据的存储，而是当流动的数据到来后，在内存中直接进行数据的实时计算。例如Twitter(X)的Storm、Yahoo的S4就是典型的流式数据计算架构，数据在任务拓扑中被计算，并输出有价值的信息。</li>
 </ol>
@@ -256,87 +267,93 @@ if (true) {
 <p><strong>流式计算</strong>：Storm(Twitter)、Kafka(The Apache Software Foundation)、Spark( Apache Spark)</p>
 <p>对于无需先存储，可以直接进行数据计算，实时性要求很严格，但数据的精确度要求稍微宽松的应用场景，流式计算具有明显的优势。</p>
 </blockquote>
-<h3 id="流式大数据的特征"><a href="#流式大数据的特征" class="headerlink" title="流式大数据的特征"></a>流式大数据的特征</h3><p><strong>实时性</strong>：流式大数据是实时产生、实时计算的，结果反馈往往也需要保证及时性。流式大数据价值的有效时间往往较短，大部分数据到来后直接在内存中进行计算，只有少量数据才被长久保存到硬盘中。</p>
+<h3 id="流式大数据的特征">流式大数据的特征</h3>
+<p><strong>实时性</strong>：流式大数据是实时产生、实时计算的，结果反馈往往也需要保证及时性。流式大数据价值的有效时间往往较短，大部分数据到来后直接在内存中进行计算，只有少量数据才被长久保存到硬盘中。</p>
 <p><strong>易失性</strong>：在大数据流式计算环境中，数据流往往是到达后立即被计算并使用。在一些应用场景中，只有极少数的数据才会被持久化地保存下来，大多数数据往往会被直接丢弃。</p>
 <p><strong>突发性</strong>：在大数据流式计算环境中，数据的产生完全由数据源确定，由于不同的数据源在不同时空范围内的状态不统一且发生动态变化，导致数据流的速率呈现出了突发性的特征。</p>
 <p><strong>无序性</strong>：在大数据流式计算中，各数据流之间、同一数据流内部各数据元素之间是无序的。</p>
 <p><strong>无限性</strong>：在大数据流式计算中，数据是实时产生、动态增加的，只要数据源处于活动状态，数据就会一直产生和持续增加下去。</p>
-<h3 id="流式计算关键技术"><a href="#流式计算关键技术" class="headerlink" title="流式计算关键技术"></a>流式计算关键技术</h3><p><strong>系统架构</strong>：系统架构是系统中各子系统间的组合方式，属于大数据所共有的关键技术。大数据采用的系统架构可以分为无中心节点的对称式系统架构比如S4、Puma等系统和由中心节点的主从式架构比如Storm系统。</p>
+<h3 id="流式计算关键技术">流式计算关键技术</h3>
+<p><strong>系统架构</strong>：系统架构是系统中各子系统间的组合方式，属于大数据所共有的关键技术。大数据采用的系统架构可以分为无中心节点的对称式系统架构比如S4、Puma等系统和由中心节点的主从式架构比如Storm系统。</p>
 <p><strong>数据传输</strong>：数据传输是指完成有向任务图到物理计算节点的部署之后，各个计算机节点之间的数据传输方式。在大数据流式计算环境中，为了实现高吞吐和低延迟，需要更加系统地优化有向任务图以及有向任务图到物理节点的映射方式。</p>
 <p><strong>编程接口</strong>：编程接口用于方便用户根据流式计算的任务特征，通过有向任务图来描述任务内在逻辑和依赖关系，并编程实现任务图中各节点的处理功能。</p>
 <p><strong>高可用技术</strong>：大数据批量计算将数据事先存储到持久化设备上，节点失效后容易实现数据重放。而大数据流式计算对数据不进行持久化存储，因此批量计算中高可用技术不完全适用于流式计算环境。</p>
-<h2 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h2><p><strong>定义</strong>：机器学习(Machine Learning)是让机器从大量样本数据中自动学习其规则，并根据学习到的规则预测未知数据的过程。</p>
+<h2 id="机器学习">机器学习</h2>
+<p><strong>定义</strong>：机器学习(Machine Learning)是让机器从大量样本数据中自动学习其规则，并根据学习到的规则预测未知数据的过程。</p>
 <p><strong>本质</strong>：机器经过大量样本的训练(Training)，获得了一定的经验(模型)，从而产生了能够推测（Inference，推断或推理）新的事物的能力，就是机器学习这种预测能力，本质上是输入到输出的映射。</p>
-<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><table>
+<h3 id="数据">数据</h3>
+<table>
 <thead>
 <tr>
-<th align="center">ID</th>
-<th align="center">Meals</th>
-<th align="center">Tip</th>
-<th align="center">Gender</th>
-<th align="center">People</th>
-<th align="center">Week</th>
-<th align="center">Time</th>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Meals</th>
+<th style="text-align:center">Tip</th>
+<th style="text-align:center">Gender</th>
+<th style="text-align:center">People</th>
+<th style="text-align:center">Week</th>
+<th style="text-align:center">Time</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">1</td>
-<td align="center">17.8</td>
-<td align="center">2.34</td>
-<td align="center">man</td>
-<td align="center">4</td>
-<td align="center">Saturday</td>
-<td align="center">dinner</td>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">17.8</td>
+<td style="text-align:center">2.34</td>
+<td style="text-align:center">man</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Saturday</td>
+<td style="text-align:center">dinner</td>
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="center">21.7</td>
-<td align="center">4.3</td>
-<td align="center">man</td>
-<td align="center">2</td>
-<td align="center">Saturday</td>
-<td align="center">dinner</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">21.7</td>
+<td style="text-align:center">4.3</td>
+<td style="text-align:center">man</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Saturday</td>
+<td style="text-align:center">dinner</td>
 </tr>
 <tr>
-<td align="center">3</td>
-<td align="center">10.1</td>
-<td align="center">1.83</td>
-<td align="center">woman</td>
-<td align="center">1</td>
-<td align="center">Thursday</td>
-<td align="center">lunch</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">10.1</td>
+<td style="text-align:center">1.83</td>
+<td style="text-align:center">woman</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Thursday</td>
+<td style="text-align:center">lunch</td>
 </tr>
 <tr>
-<td align="center">4</td>
-<td align="center">32.9</td>
-<td align="center">3.11</td>
-<td align="center">man</td>
-<td align="center">2</td>
-<td align="center">Sunday</td>
-<td align="center">dinner</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">32.9</td>
+<td style="text-align:center">3.11</td>
+<td style="text-align:center">man</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Sunday</td>
+<td style="text-align:center">dinner</td>
 </tr>
 <tr>
-<td align="center">5</td>
-<td align="center">16.5</td>
-<td align="center">3.23</td>
-<td align="center">woman</td>
-<td align="center">3</td>
-<td align="center">Thursday</td>
-<td align="center">lunch</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">16.5</td>
+<td style="text-align:center">3.23</td>
+<td style="text-align:center">woman</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Thursday</td>
+<td style="text-align:center">lunch</td>
 </tr>
 <tr>
-<td align="center">6</td>
-<td align="center">13.4</td>
-<td align="center">1.58</td>
-<td align="center">man</td>
-<td align="center">2</td>
-<td align="center">Friday</td>
-<td align="center">lunch</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">13.4</td>
+<td style="text-align:center">1.58</td>
+<td style="text-align:center">man</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Friday</td>
+<td style="text-align:center">lunch</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><strong>数据集</strong>：像表中这样的样本数据叫做数据集（Dataset），该数据集以结构化的列表形式呈现。数据集由若干个样本组成。</p>
 <p><strong>样本</strong>：每个样本是一个观测数据的记录（Record），或者叫观测值（Observance），以表格中以行（Row）的形式体现。</p>
-<p><strong>标签&#x2F;目标</strong>：在这个情景中，我们关注的是顾客的Tip的情况，Tip这一列是我们关注的结果（Outcome），我们可以把这个变量称为因变量（Dependent Variable）。在机器学习中通常叫做目标（Target）或标签（Label）。</p>
+<p><strong>标签/目标</strong>：在这个情景中，我们关注的是顾客的Tip的情况，Tip这一列是我们关注的结果（Outcome），我们可以把这个变量称为因变量（Dependent Variable）。在机器学习中通常叫做目标（Target）或标签（Label）。</p>
 <p><strong>特征</strong>：表中其他列表示的变量在这个问题中是用来解释和预测“Tip”的，我们把这些变量叫做自变量（Independent Variable），在机器学习领域通常用特征（Feature）这个术语来表示。特征和目标在表中通常以列（Column）的形式呈现。</p>
 <ul>
 <li>数据型（Numerical）：长度、温度、价格</li>
@@ -344,14 +361,16 @@ if (true) {
 <li>文本（Text）：姓名、地址</li>
 <li>日期（Data time）：2024-06-21</li>
 </ul>
-<h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><p><strong>监督式学习</strong>：我们把具有标签数据的学习任务叫做监督式学习。</p>
+<h3 id="学习">学习</h3>
+<p><strong>监督式学习</strong>：我们把具有标签数据的学习任务叫做监督式学习。</p>
 <p><strong>回归任务</strong>：当目标变量式连续性（比如温度和价格）的时候，我们把这类问题叫做回归任务。</p>
 <p><strong>分类任务</strong>：当目标是离散型（例如某种植物是否具有毒性、贷款人是否违约、员工所属部门类型）的时候，我们遇到的问题则是分类任务。</p>
 <p><strong>非监督学习</strong>：我们遇到的样本数据并没有标签数据，我们把这个问题叫做非监督式学习。</p>
 <p><strong>聚类</strong>：聚类它根据样本数据分布的特点将数据分成几个类。</p>
 <p><strong>强化学习</strong>：强化学习（Reinforcement Learning）是基于“行动-反馈”的自我学习机制。所谓反馈，是一种基于行动对学习机的奖励。学习机以最大化奖励为目标，不断改进“行动”，从而适应环境。强化学习与监督式学习的主要区别是，前者是完全靠自己的精力去学习，没有人告知学习机正确的答案，“强化”的信号是对学习机行动的反馈；而后者是有人在监督学习机。</p>
 <p><strong>迁移学习</strong>：迁移学习将已经训练好的参数提供给新的模型用做训练。现实中很多机器学习问题是存在相关性的。</p>
-<h3 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h3><p>在机器学习任务中，我们通常将数据集分成三部分：训练集（Training Set）、验证集（Validation Set）和测试集（Test Set）</p>
+<h3 id="数据集">数据集</h3>
+<p>在机器学习任务中，我们通常将数据集分成三部分：训练集（Training Set）、验证集（Validation Set）和测试集（Test Set）</p>
 <ul>
 <li>训练集：用于训练模型，确定模型中的参数。</li>
 <li>验证集：用于模型的选择和优化。</li>
@@ -359,7 +378,8 @@ if (true) {
 </ul>
 <p><strong>过拟合</strong>：模型是用训练集进行学习的，倾向于尽可能拟合训练集数据的特性，因此在训练集上的测试效果通常会很好，但在没有见过数据集上表现效果可能会明显下降，这个现象叫做过度拟合（Overfitting）简称过拟合。</p>
 <p><strong>欠拟合</strong>：“欠拟合”常常在模型学习能力较弱，而数据复杂度较高的情况出现，此时模型由于学习能力不足，无法学习到数据集中的“一般规律”，因而导致泛化能力弱。</p>
-<h3 id="机器学习流程"><a href="#机器学习流程" class="headerlink" title="机器学习流程"></a>机器学习流程</h3><p><strong>机器学习流程</strong>：数据导入 -&gt; 探索性分析 -&gt; 数据清洗 -&gt; 特征工程 -&gt; 算法选择和优化 -&gt; 模型训练和评估</p>
+<h3 id="机器学习流程">机器学习流程</h3>
+<p><strong>机器学习流程</strong>：数据导入 -&gt; 探索性分析 -&gt; 数据清洗 -&gt; 特征工程 -&gt; 算法选择和优化 -&gt; 模型训练和评估</p>
 <p><strong>探索性分析</strong>：探索性分析或探索性数据分析是通过图表等可视化工具对原始数据进行大致了解和初步分析的过程。</p>
 <ul>
 <li>了解数据集的基本信息</li>
@@ -368,30 +388,38 @@ if (true) {
 </ul>
 <p><strong>数据清洗</strong>：数据质量差，杂乱无章，即使再好的算法也没有用，就好比加工垃圾一样，是因为我们遇到的绝大数数据集都是“不干净的”</p>
 <ul>
-<li><p>存在重复记录的数据</p>
+<li>
+<p>存在重复记录的数据</p>
 <p>​	人口数据中同一个人有两条完全相同的记录</p>
 </li>
-<li><p>存在不相关的记录</p>
+<li>
+<p>存在不相关的记录</p>
 <p>​	我们只关注中国人口数据，但数据集有美国人的信息</p>
 </li>
-<li><p>无用的特征信息</p>
+<li>
+<p>无用的特征信息</p>
 <p>​	身份ID等一些显然不会对结果有影响的编号类数据</p>
 </li>
-<li><p>文字拼写错误</p>
+<li>
+<p>文字拼写错误</p>
 <p>​	一些比较明显的信息输入错误</p>
 </li>
-<li><p>信息格式不统一</p>
+<li>
+<p>信息格式不统一</p>
 <p>​	大小写不一致，表述形式不一致</p>
 </li>
-<li><p>明显错误的离群值</p>
+<li>
+<p>明显错误的离群值</p>
 <p>​	某人的年龄数据显示为175</p>
 </li>
-<li><p>缺少数据</p>
+<li>
+<p>缺少数据</p>
 <p>​	表格中有一些信息空缺，没有记录</p>
 </li>
 </ul>
 <p><strong>特征工程</strong>：特征工程又称特征提取，是机器学习建模之前的一个重要步骤。机器学习的本质是要找到x到y的映射，我们最终的目标是输出y。如果x“不给力”的话，后面的努力往往会成为徒劳。特征工厂就是从原始数据中找到合适的特征集x的过程。</p>
-<h2 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h2><ol>
+<h2 id="简答题">简答题</h2>
+<ol>
 <li>简述机器学习与人工智能的关系。</li>
 </ol>
 <p>答：机器学习是人工智能的一个分支，作为人工智能核心技术和实现手段，通过机器学习的方法解决人工智能面对的问题。</p>
@@ -432,7 +460,7 @@ if (true) {
 <p>输入层：卷积神经网络的起始，它接受原始的数据作为输入。</p>
 <p>卷积层：卷积神经网络的重要组成部分，它通过一组可训练的卷积核对输入进行卷积操作以提取特征。</p>
 <p>池化层：用于降低特征的维度，减少计算量和内存占用，同时增加模型的鲁棒性。</p>
-<p>全连接层：将特征提取和分类&#x2F;回归阶段联系起来，将多维特征转换为一维向量，并进行线性变换和激活操作，以生成最终的输出。</p>
+<p>全连接层：将特征提取和分类/回归阶段联系起来，将多维特征转换为一维向量，并进行线性变换和激活操作，以生成最终的输出。</p>
 <p>输出层：产生卷积神经网络的最终输出，通常是一个分类或回归结果。</p>
 <ol start="10">
 <li>如何防止卷积神经网络的过拟合问题？</li>
@@ -441,43 +469,35 @@ if (true) {
 <p>在训练图像识别的深度神经网络时，使用更多的图像数据集训练的模型会使训练的网络具有更好地泛化性能，减小过拟合。</p>
 <p>正则化的作用是调节模型复杂度对损失函数的影响，若权重衰减很大，则复杂的模型损失函数的值也就大。</p>
 <p>使用Dropout是在每次训练过程中随机将部分神经元的权重置为0，即让一些神经元失效，这样可以缩减参数量，避免过拟合。</p>
-<h2 id="程序题"><a href="#程序题" class="headerlink" title="程序题"></a>程序题</h2><ol>
-<li><p>请用户输入一个数，判断该数是否为质数。</p>
+<h2 id="程序题">程序题</h2>
+<ol>
+<li>请用户输入一个数，判断该数是否为质数。</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入一个数：&quot;</span>))</span><br><span class="line">flag = <span class="literal">True</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n):</span><br><span class="line"> <span class="keyword">if</span> n % i == <span class="number">0</span>:</span><br><span class="line">  flag = <span class="literal">False</span></span><br><span class="line">  <span class="keyword">break</span></span><br><span class="line"><span class="keyword">if</span> flag:</span><br><span class="line"> <span class="built_in">print</span>(n, <span class="string">&quot;是质数&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line"> <span class="built_in">print</span>(n, <span class="string">&quot;不是质数&quot;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打印出所有的”水仙花数”。所谓”水仙花数”是指一个三位数，其各位数字立方和等于该数本身。例如：153是一个”水仙花数”，因为153&#x3D;13＋53＋33。</p>
+<ol start="2">
+<li>打印出所有的&quot;水仙花数&quot;。所谓&quot;水仙花数&quot;是指一个三位数，其各位数字立方和等于该数本身。例如：153是一个&quot;水仙花数&quot;，因为153=13＋53＋33。</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>, <span class="number">1000</span>):</span><br><span class="line"> s = <span class="built_in">str</span>(i)</span><br><span class="line"> a = <span class="built_in">int</span>(s[<span class="number">0</span>])</span><br><span class="line"> b = <span class="built_in">int</span>(s[<span class="number">1</span>])</span><br><span class="line"> c = <span class="built_in">int</span>(s[<span class="number">2</span>])</span><br><span class="line"> <span class="keyword">if</span> i == a ** <span class="number">3</span> + b ** <span class="number">3</span> + c ** <span class="number">3</span>:</span><br><span class="line">  <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
-
-</li>
-<li><p>一个小球从100米高度自由落下，每次落地后反弹回原高度的一半，再落下。求它在第10次落地时，共经过多少米？第10次反弹多高？</p>
-</li>
+<ol start="3">
+<li>一个小球从100米高度自由落下，每次落地后反弹回原高度的一半，再落下。求它在第10次落地时，共经过多少米？第10次反弹多高？</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">h = <span class="number">100</span></span><br><span class="line">s = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line"> s += <span class="number">1.5</span> * h</span><br><span class="line"> h *= <span class="number">0.5</span></span><br><span class="line">s -= h</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;s:&quot;</span>, s)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;h:&quot;</span>, h)</span><br></pre></td></tr></table></figure>
-
-
 <ol start="4">
 <li>猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不瘾，又多吃了一个。第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第10天早上想再吃时，见只剩下一个桃子了。求第一天共摘了多少个桃子？</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">9</span>):</span><br><span class="line"> s = (s + <span class="number">1</span>) * <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure>
-
-
 <ol start="5">
-<li>一个整数，它加上100后是一个完全平方数，再加上168后又是一个完全平方数，请问该数是多少？所谓的“完全平方数”，就是指一个数能表示成某个整数的平方的形式，例如9 &#x3D; 3 * 3。</li>
+<li>一个整数，它加上100后是一个完全平方数，再加上168后又是一个完全平方数，请问该数是多少？所谓的“完全平方数”，就是指一个数能表示成某个整数的平方的形式，例如9 = 3 * 3。</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line"> <span class="keyword">if</span> (n + <span class="number">100</span>) ** <span class="number">0.5</span> == <span class="built_in">int</span>((n + <span class="number">100</span>) ** <span class="number">0.5</span>) \</span><br><span class="line">  <span class="keyword">and</span> (n + <span class="number">168</span>) ** <span class="number">0.5</span> == <span class="built_in">int</span>((n + <span class="number">168</span>) ** <span class="number">0.5</span>)</span><br><span class="line">  <span class="built_in">print</span>(n)</span><br><span class="line">  <span class="keyword">break</span></span><br><span class="line"> <span class="keyword">else</span>:</span><br><span class="line">  n += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-
 <ol start="6">
 <li>输入某年某月某日，判断这一天是这一年的第几天？</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">isLeap</span>(<span class="params">year</span>):</span><br><span class="line">  <span class="keyword">return</span> ((year % <span class="number">400</span> == <span class="number">0</span>) <span class="keyword">or</span> (year % <span class="number">4</span> == <span class="number">0</span> <span class="keyword">and</span> year % <span class="number">100</span> != <span class="number">0</span>))</span><br><span class="line"> </span><br><span class="line">year = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;year:&quot;</span>))</span><br><span class="line">month = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;month:&quot;</span>))</span><br><span class="line"></span><br><span class="line">day = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;day:&quot;</span>))</span><br><span class="line">arr = (<span class="number">0</span>, <span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>)</span><br><span class="line"></span><br><span class="line">days = day</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, month):</span><br><span class="line"> days += arr[i]</span><br><span class="line"><span class="keyword">if</span> month &gt;= <span class="number">3</span> <span class="keyword">and</span> isLeap(year):</span><br><span class="line"> days += <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(days)</span><br></pre></td></tr></table></figure>
-
-
 <ol start="7">
-<li>计算一个句子中各个单词的出现频率。例如”Hello, how are you? Are you feeling good today?”。</li>
+<li>计算一个句子中各个单词的出现频率。例如&quot;Hello, how are you? Are you feeling good today?&quot;。</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">line = <span class="string">&quot;Hello, how are you? Are you feeling good today?&quot;</span></span><br><span class="line">line = line.replace(<span class="string">&#x27;?&#x27;</span>, <span class="string">&#x27;&#x27;</span>) \</span><br><span class="line">​      .replace(<span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;&#x27;</span>) \</span><br><span class="line">​      .replace(<span class="string">&#x27;.&#x27;</span>, <span class="string">&#x27;&#x27;</span>) \</span><br><span class="line">​      .lower()</span><br><span class="line">words = line.split()</span><br><span class="line">counts = &#123; &#125;</span><br><span class="line"><span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line"> <span class="keyword">if</span> word <span class="keyword">in</span> counts:</span><br><span class="line">  counts[word] += <span class="number">1</span></span><br><span class="line"> <span class="keyword">else</span>:</span><br><span class="line">  counts[word] = <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(counts)</span><br></pre></td></tr></table></figure>
-
 </article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Avatar.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Avatar.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">PrsTest</div><div class="post-copyright__author_desc">A computer science student</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/')">人工智能（复习）</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><script>function copyCurrentPageUrl() {
   var currentPageUrl = window.location.href;
   var input = document.createElement("input");
