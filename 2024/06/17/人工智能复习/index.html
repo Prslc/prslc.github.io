@@ -229,80 +229,76 @@
 <p><strong>高可用技术</strong>：大数据批量计算将数据事先存储到持久化设备上，节点失效后容易实现数据重放。而大数据流式计算对数据不进行持久化存储，因此批量计算中高可用技术不完全适用于流式计算环境。</p>
 <h2 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h2><p><strong>定义</strong>：机器学习(Machine Learning)是让机器从大量样本数据中自动学习其规则，并根据学习到的规则预测未知数据的过程。</p>
 <p><strong>本质</strong>：机器经过大量样本的训练(Training)，获得了一定的经验(模型)，从而产生了能够推测（Inference，推断或推理）新的事物的能力，就是机器学习这种预测能力，本质上是输入到输出的映射。</p>
-<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><div class="table-container">
-<table>
+<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><table>
 <thead>
 <tr>
-<th style="text-align:center">ID</th>
-<th style="text-align:center">Meals</th>
-<th style="text-align:center">Tip</th>
-<th style="text-align:center">Gender</th>
-<th style="text-align:center">People</th>
-<th style="text-align:center">Week</th>
-<th style="text-align:center">Time</th>
+<th align="center">ID</th>
+<th align="center">Meals</th>
+<th align="center">Tip</th>
+<th align="center">Gender</th>
+<th align="center">People</th>
+<th align="center">Week</th>
+<th align="center">Time</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">17.8</td>
-<td style="text-align:center">2.34</td>
-<td style="text-align:center">man</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">Saturday</td>
-<td style="text-align:center">dinner</td>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">17.8</td>
+<td align="center">2.34</td>
+<td align="center">man</td>
+<td align="center">4</td>
+<td align="center">Saturday</td>
+<td align="center">dinner</td>
 </tr>
 <tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">21.7</td>
-<td style="text-align:center">4.3</td>
-<td style="text-align:center">man</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">Saturday</td>
-<td style="text-align:center">dinner</td>
+<td align="center">2</td>
+<td align="center">21.7</td>
+<td align="center">4.3</td>
+<td align="center">man</td>
+<td align="center">2</td>
+<td align="center">Saturday</td>
+<td align="center">dinner</td>
 </tr>
 <tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">10.1</td>
-<td style="text-align:center">1.83</td>
-<td style="text-align:center">woman</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">Thursday</td>
-<td style="text-align:center">lunch</td>
+<td align="center">3</td>
+<td align="center">10.1</td>
+<td align="center">1.83</td>
+<td align="center">woman</td>
+<td align="center">1</td>
+<td align="center">Thursday</td>
+<td align="center">lunch</td>
 </tr>
 <tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">32.9</td>
-<td style="text-align:center">3.11</td>
-<td style="text-align:center">man</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">Sunday</td>
-<td style="text-align:center">dinner</td>
+<td align="center">4</td>
+<td align="center">32.9</td>
+<td align="center">3.11</td>
+<td align="center">man</td>
+<td align="center">2</td>
+<td align="center">Sunday</td>
+<td align="center">dinner</td>
 </tr>
 <tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">16.5</td>
-<td style="text-align:center">3.23</td>
-<td style="text-align:center">woman</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">Thursday</td>
-<td style="text-align:center">lunch</td>
+<td align="center">5</td>
+<td align="center">16.5</td>
+<td align="center">3.23</td>
+<td align="center">woman</td>
+<td align="center">3</td>
+<td align="center">Thursday</td>
+<td align="center">lunch</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">13.4</td>
-<td style="text-align:center">1.58</td>
-<td style="text-align:center">man</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">Friday</td>
-<td style="text-align:center">lunch</td>
+<td align="center">6</td>
+<td align="center">13.4</td>
+<td align="center">1.58</td>
+<td align="center">man</td>
+<td align="center">2</td>
+<td align="center">Friday</td>
+<td align="center">lunch</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p><strong>数据集</strong>：像表中这样的样本数据叫做数据集（Dataset），该数据集以结构化的列表形式呈现。数据集由若干个样本组成。</p>
 <p><strong>样本</strong>：每个样本是一个观测数据的记录（Record），或者叫观测值（Observance），以表格中以行（Row）的形式体现。</p>
-<p><strong>标签/目标</strong>：在这个情景中，我们关注的是顾客的Tip的情况，Tip这一列是我们关注的结果（Outcome），我们可以把这个变量称为因变量（Dependent Variable）。在机器学习中通常叫做目标（Target）或标签（Label）。</p>
+<p><strong>标签&#x2F;目标</strong>：在这个情景中，我们关注的是顾客的Tip的情况，Tip这一列是我们关注的结果（Outcome），我们可以把这个变量称为因变量（Dependent Variable）。在机器学习中通常叫做目标（Target）或标签（Label）。</p>
 <p><strong>特征</strong>：表中其他列表示的变量在这个问题中是用来解释和预测“Tip”的，我们把这些变量叫做自变量（Independent Variable），在机器学习领域通常用特征（Feature）这个术语来表示。特征和目标在表中通常以列（Column）的形式呈现。</p>
 <ul>
 <li>数据型（Numerical）：长度、温度、价格</li>
@@ -335,25 +331,25 @@
 <p><strong>数据清洗</strong>：数据质量差，杂乱无章，即使再好的算法也没有用，就好比加工垃圾一样，是因为我们遇到的绝大数数据集都是“不干净的”</p>
 <ul>
 <li><p>存在重复记录的数据</p>
-<p>​    人口数据中同一个人有两条完全相同的记录</p>
+<p>​	人口数据中同一个人有两条完全相同的记录</p>
 </li>
 <li><p>存在不相关的记录</p>
-<p>​    我们只关注中国人口数据，但数据集有美国人的信息</p>
+<p>​	我们只关注中国人口数据，但数据集有美国人的信息</p>
 </li>
 <li><p>无用的特征信息</p>
-<p>​    身份ID等一些显然不会对结果有影响的编号类数据</p>
+<p>​	身份ID等一些显然不会对结果有影响的编号类数据</p>
 </li>
 <li><p>文字拼写错误</p>
-<p>​    一些比较明显的信息输入错误</p>
+<p>​	一些比较明显的信息输入错误</p>
 </li>
 <li><p>信息格式不统一</p>
-<p>​    大小写不一致，表述形式不一致</p>
+<p>​	大小写不一致，表述形式不一致</p>
 </li>
 <li><p>明显错误的离群值</p>
-<p>​    某人的年龄数据显示为175</p>
+<p>​	某人的年龄数据显示为175</p>
 </li>
 <li><p>缺少数据</p>
-<p>​    表格中有一些信息空缺，没有记录</p>
+<p>​	表格中有一些信息空缺，没有记录</p>
 </li>
 </ul>
 <p><strong>特征工程</strong>：特征工程又称特征提取，是机器学习建模之前的一个重要步骤。机器学习的本质是要找到x到y的映射，我们最终的目标是输出y。如果x“不给力”的话，后面的努力往往会成为徒劳。特征工厂就是从原始数据中找到合适的特征集x的过程。</p>
@@ -361,53 +357,53 @@
 <li>简述机器学习与人工智能的关系。</li>
 </ol>
 <p>答：机器学习是人工智能的一个分支，作为人工智能核心技术和实现手段，通过机器学习的方法解决人工智能面对的问题。</p>
-<ol>
+<ol start="2">
 <li>简述机器学习与数据科学、大数据分析等概念的关系。</li>
 </ol>
 <p>答：数据科学主要包括两个方面：用数据的方法研究科学和用科学的方法研究数据。前者包括生物信息学、天体信息学、数字地球等领域；后者包括统计学、机器学习、数据挖掘、数据库等领域。大数据分析即是后者的一个部分。一般使用机器学习这个工具做大数据的分析工作，也就是说机器学习是我们做大数据分析的一个比较好用的工具，但是大数据分析的工具并不止机器学习，机器学习也并不只能做大数据分析。</p>
-<ol>
+<ol start="3">
 <li>简要说明机器学习的基本过程。</li>
 </ol>
 <p>答：机器学习的基本过程包括数据导入、探索性分析、数据清洗、特征工程、算法选择和优化、模型训练和评估。</p>
-<ol>
+<ol start="4">
 <li>什么是交叉校验？</li>
 </ol>
 <p>答：在一般情况下将数据集随机切分成训练集、验证集和测试集三部分。其中训练集用来训练模型；验证集用于训练过程中模型的验证和选择，如果有多个模型，选择其中最小预测误差的模型；而测试集用于对最终训练完成的模型进行评估。在实际应用中，数据往往并不充足，此时可以采用交叉验证的方法，将训练集切分成很多份，然后进行组合，以扩大可用训练集的数量。</p>
-<ol>
+<ol start="5">
 <li>什么是过拟合问题？如何判断过拟合？</li>
 </ol>
 <p>答：模型的训练误差低但是泛化误差比较高，则称此模型过拟合。</p>
 <p>【泛化误差反映了模型在实际应用中对于新输入的处理能力，是衡量学习方法泛化能力的一个关键指标。】</p>
 <p>判断标准是：模型在训练集和验证集上表现都很好，而在测试集上表现很差。</p>
-<ol>
+<ol start="6">
 <li>常用的分类算法有哪些？列举5种。</li>
 </ol>
 <p>答：常见的分类算法包括逻辑回归、线性判别分析、决策树、朴素贝叶斯、K最近邻、支持向量机(SVM)等。</p>
-<ol>
+<ol start="7">
 <li>聚类分析的目的是什么？</li>
 </ol>
 <p>答：聚类分析用于对未知类别的样本进行划分，将它们按照一定的规则划分成若干个类簇，把相似的样本聚在一个类簇中，把不相似的样本分为不同类簇，从而揭示样本之间内在的性质以及相互之间的联系规律。</p>
-<ol>
+<ol start="8">
 <li>常用的聚类算法有哪些？列举5种。</li>
 </ol>
 <p>答：常见的聚类算法包括KMeans、均值漂移、DBSCAN、GMM（高斯混合模型）、凝聚层次、图团体等。</p>
-<ol>
+<ol start="9">
 <li>卷积神经网络包括哪几层？简要说明各层的作用。</li>
 </ol>
 <p>答：卷积神经网络包括输入层、卷积层、池化层、全连接层和输出层。</p>
 <p>输入层：卷积神经网络的起始，它接受原始的数据作为输入。</p>
 <p>卷积层：卷积神经网络的重要组成部分，它通过一组可训练的卷积核对输入进行卷积操作以提取特征。</p>
 <p>池化层：用于降低特征的维度，减少计算量和内存占用，同时增加模型的鲁棒性。</p>
-<p>全连接层：将特征提取和分类/回归阶段联系起来，将多维特征转换为一维向量，并进行线性变换和激活操作，以生成最终的输出。</p>
+<p>全连接层：将特征提取和分类&#x2F;回归阶段联系起来，将多维特征转换为一维向量，并进行线性变换和激活操作，以生成最终的输出。</p>
 <p>输出层：产生卷积神经网络的最终输出，通常是一个分类或回归结果。</p>
-<ol>
+<ol start="10">
 <li>如何防止卷积神经网络的过拟合问题？</li>
 </ol>
 <p>答：防止过拟合的方法有三种：人为增加数据集、正则化、Dropout。</p>
 <p>在训练图像识别的深度神经网络时，使用更多的图像数据集训练的模型会使训练的网络具有更好地泛化性能，减小过拟合。</p>
 <p>正则化的作用是调节模型复杂度对损失函数的影响，若权重衰减很大，则复杂的模型损失函数的值也就大。</p>
 <p>使用Dropout是在每次训练过程中随机将部分神经元的权重置为0，即让一些神经元失效，这样可以缩减参数量，避免过拟合。</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://prstest.github.io">Prslc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/">https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E4%B9%A0/">复习</a><a class="post-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></div><div class="post-share"><div class="social-share" data-image="/images/Avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/08/19/Windows_pagefile/" title="修改Windows分页文件"><img class="cover" src="/2024/08/19/Windows_pagefile/1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">修改Windows分页文件</div></div><div class="info-2"><div class="info-item-1">使用SpaceSniffer之类查看磁盘占用的工具会发现在系统盘符下存在一个15GB的文件叫pagefile.sys这是windows系统的分页文件。  分页文件是什么？分页文件类似于Linux的Swapfile的技术，是操作系统用于管理虚拟内存的重要组成部分。虚拟内存是一种将硬件内存（RAM）与存储空间（如硬盘或固态硬盘）相结合的技术。当物理内存不够用时，操作系统会使用虚拟内存来确保系统继续正常运行。参考资料 正常的修改方法声明本教程使用的系统是Windows11...</div></div></div></a><a class="pagination-related" href="/2024/05/08/Graph/" title="图论（代码）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">图论（代码）</div></div><div class="info-2"><div class="info-item-1">头文件和定义12345678910111213#include &lt;iostream&gt;#include &lt;assert.h&gt;#include &lt;string&gt;//#include &quot;SeqQueue.h&quot;//#include &quot;LinkStack.h&quot;using namespace std;#define INFINITY 1000000struct Graph&#123;	int vCount,eCount;	string *vers;	int **matrix;	bool isDirect,isHaveWeight;&#125;; 搜索顶点12345678//search vertexint GraphLocate(Graph g,string v)&#123;	for(int i=0;i&lt;g.vCount;i++)		if(g.vers[i]==v)			return i;	return...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2024/04/02/Discrete-mathematics/" title="离散数学（复习）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="fas fa-history fa-fw"></i> 2024-08-23</div><div class="info-item-2">离散数学（复习）</div></div><div class="info-2"><div class="info-item-1">1.1 命题与命题联结词1.1.1 命题与命题的表示命题的判定能判定真假的陈述句称为命题 真假意义确实存在，但不能立即给出的陈述句是命题。 非陈述句的祈使句、命令句、疑问句、感叹句都不是命题。 无法确定真假（真值不唯一 的陈述句也不是命题。) 命题的表示命题符号化 用大、小写英文字母表示简单命题。 用“T”（1）表示为真，用“F”（0）表示假 12T = true = 1;F = false = 0;  命题分类： 简单命题（原子命题） 复合命题  1.1.2 复合命题与联结词1. 复合命题的符号化原则：符号化后的真值必须与命题保持一致 步骤： 分解复合命题为简单命题 列出原命题与简单命题间的真值对应关系 选择合适的联结词进行表达  2. 否定联结词定义： 设p为命题，复合命题”非 P“（或 P 的否定）称为P的否定式P 符号称作否定联结词规定P为真当且仅当 P 为假 3. 合取联结词定义： 设P,Q为两个命题，复合命题“P并且Q”（或P与Q）称为P与Q的合取式，记作PQ，称作合取联结词。规定PQ为真当且仅当P与Q同时为真 。 4....</div></div></div></a><a class="pagination-related" href="/2024/05/08/Graph/" title="图论（代码）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="fas fa-history fa-fw"></i> 2024-08-23</div><div class="info-item-2">图论（代码）</div></div><div class="info-2"><div class="info-item-1">头文件和定义12345678910111213#include &lt;iostream&gt;#include &lt;assert.h&gt;#include &lt;string&gt;//#include &quot;SeqQueue.h&quot;//#include &quot;LinkStack.h&quot;using namespace std;#define INFINITY 1000000struct Graph&#123;	int vCount,eCount;	string *vers;	int **matrix;	bool isDirect,isHaveWeight;&#125;; 搜索顶点12345678//search vertexint GraphLocate(Graph g,string v)&#123;	for(int i=0;i&lt;g.vCount;i++)		if(g.vers[i]==v)			return i;	return...</div></div></div></a><a class="pagination-related" href="/2024/04/02/Binary%20tree/" title="二叉树（代码）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="fas fa-history fa-fw"></i> 2024-08-23</div><div class="info-item-2">二叉树（代码）</div></div><div class="info-2"><div class="info-item-1">头文件和定义123456789101112#include&lt;iostream&gt;#include&lt;ctime&gt;#include&lt;cassert&gt;#include&lt;string&gt;using namespace std;struct BitreeNode&#123;	char data;	BitreeNode *lc,*rc;&#125;;typedef BitreeNode* Bitree;  创建树1234567891011121314//createvoid BitreeCreate(Bitree &amp;t,string define,int &amp;i)&#123;	if(define[i]==&#x27;*&#x27;)&#123;		t=0;		i++;		return;	&#125;	t=new...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div><div class="comment-switch"><span class="first-comment">Utterances</span><span id="switch-btn"></span><span class="second-comment">Waline</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/Avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Prslc</div><div class="author-info-description">A software engineering student</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/prstest"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Welcome to my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%8F%E5%B7%AE%E5%92%8C%E6%96%B9%E5%B7%AE"><span class="toc-number">1.</span> <span class="toc-text">偏差和方差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-number">2.</span> <span class="toc-text">神经网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="toc-number">2.1.</span> <span class="toc-text">反向传播</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">机器学习方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">大数据的计算模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E5%BC%8F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-number">4.1.</span> <span class="toc-text">流式大数据的特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E5%BC%8F%E8%AE%A1%E7%AE%97%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF"><span class="toc-number">4.2.</span> <span class="toc-text">流式计算关键技术</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-number">5.</span> <span class="toc-text">机器学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE"><span class="toc-number">5.1.</span> <span class="toc-text">数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0"><span class="toc-number">5.2.</span> <span class="toc-text">学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-number">5.3.</span> <span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%B5%81%E7%A8%8B"><span class="toc-number">5.4.</span> <span class="toc-text">机器学习流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">简答题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/20/ApatchKPM/" title="从安装Apatch到嵌入KPM"><img src="/2024/08/20/ApatchKPM/top-img.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从安装Apatch到嵌入KPM"/></a><div class="content"><a class="title" href="/2024/08/20/ApatchKPM/" title="从安装Apatch到嵌入KPM">从安装Apatch到嵌入KPM</a><time datetime="2024-08-20T10:15:51.000Z" title="Created 2024-08-20 18:15:51">2024-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/19/Windows_pagefile/" title="修改Windows分页文件"><img src="/2024/08/19/Windows_pagefile/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="修改Windows分页文件"/></a><div class="content"><a class="title" href="/2024/08/19/Windows_pagefile/" title="修改Windows分页文件">修改Windows分页文件</a><time datetime="2024-08-19T08:11:27.000Z" title="Created 2024-08-19 16:11:27">2024-08-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/" title="人工智能（复习）">人工智能（复习）</a><time datetime="2024-06-17T15:57:02.000Z" title="Created 2024-06-17 23:57:02">2024-06-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/08/Graph/" title="图论（代码）">图论（代码）</a><time datetime="2024-05-08T12:05:14.000Z" title="Created 2024-05-08 20:05:14">2024-05-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/02/Discrete-mathematics/" title="离散数学（复习）">离散数学（复习）</a><time datetime="2024-04-02T08:57:52.000Z" title="Created 2024-04-02 16:57:52">2024-04-02</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Prslc</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.2.2"></script><script src="/js/main.js?v=5.2.2"></script><div class="js-pjax"><script>(() => {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://prstest.github.io">Prslc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/">https://prstest.github.io/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E4%B9%A0/">复习</a><a class="post-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></div><div class="post-share"><div class="social-share" data-image="/images/Avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/08/19/Windows_pagefile/" title="修改Windows分页文件"><img class="cover" src="/2024/08/19/Windows_pagefile/1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">修改Windows分页文件</div></div><div class="info-2"><div class="info-item-1">使用SpaceSniffer之类查看磁盘占用的工具会发现在系统盘符下存在一个15GB的文件叫pagefile.sys这是windows系统的分页文件。  分页文件是什么？分页文件类似于Linux的Swapfile的技术，是操作系统用于管理虚拟内存的重要组成部分。虚拟内存是一种将硬件内存（RAM）与存储空间（如硬盘或固态硬盘）相结合的技术。当物理内存不够用时，操作系统会使用虚拟内存来确保系统继续正常运行。参考资料 正常的修改方法声明本教程使用的系统是Windows11...</div></div></div></a><a class="pagination-related" href="/2024/05/08/Graph/" title="图论（代码）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">图论（代码）</div></div><div class="info-2"><div class="info-item-1">头文件和定义12345678910111213#include &lt;iostream&gt;#include &lt;assert.h&gt;#include &lt;string&gt;//#include &quot;SeqQueue.h&quot;//#include &quot;LinkStack.h&quot;using namespace std;#define INFINITY 1000000struct Graph&#123;	int vCount,eCount;	string *vers;	int **matrix;	bool isDirect,isHaveWeight;&#125;;  搜索顶点12345678//search vertexint GraphLocate(Graph g,string v)&#123;	for(int i=0;i&lt;g.vCount;i++)		if(g.vers[i]==v)			return i;	return...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2024/04/02/Binary%20tree/" title="二叉树（代码）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="fas fa-history fa-fw"></i> 2024-08-23</div><div class="info-item-2">二叉树（代码）</div></div><div class="info-2"><div class="info-item-1">头文件和定义123456789101112#include&lt;iostream&gt;#include&lt;ctime&gt;#include&lt;cassert&gt;#include&lt;string&gt;using namespace std;struct BitreeNode&#123;	char data;	BitreeNode *lc,*rc;&#125;;typedef BitreeNode* Bitree;    创建树1234567891011121314//createvoid BitreeCreate(Bitree &amp;t,string define,int &amp;i)&#123;	if(define[i]==&#x27;*&#x27;)&#123;		t=0;		i++;		return;	&#125;	t=new...</div></div></div></a><a class="pagination-related" href="/2024/04/02/Discrete-mathematics/" title="离散数学（复习）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="fas fa-history fa-fw"></i> 2024-08-23</div><div class="info-item-2">离散数学（复习）</div></div><div class="info-2"><div class="info-item-1">1.1 命题与命题联结词1.1.1 命题与命题的表示命题的判定能判定真假的陈述句称为命题 真假意义确实存在，但不能立即给出的陈述句是命题。 非陈述句的祈使句、命令句、疑问句、感叹句都不是命题。 无法确定真假（真值不唯一 的陈述句也不是命题。) 命题的表示命题符号化 用大、小写英文字母表示简单命题。 用“T”（1）表示为真，用“F”（0）表示假 12T = true = 1;F = false = 0;    命题分类： 简单命题（原子命题） 复合命题  1.1.2 复合命题与联结词1. 复合命题的符号化原则：符号化后的真值必须与命题保持一致 步骤： 分解复合命题为简单命题 列出原命题与简单命题间的真值对应关系 选择合适的联结词进行表达  2. 否定联结词定义： 设p为命题，复合命题”非 P“（或 P 的否定）称为P的否定式P 符号称作否定联结词规定P为真当且仅当 P 为假 3. 合取联结词定义： 设P,Q为两个命题，复合命题“P并且Q”（或P与Q）称为P与Q的合取式，记作PQ，称作合取联结词。规定PQ为真当且仅当P与Q同时为真 。 4....</div></div></div></a><a class="pagination-related" href="/2024/05/08/Graph/" title="图论（代码）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="fas fa-history fa-fw"></i> 2024-08-23</div><div class="info-item-2">图论（代码）</div></div><div class="info-2"><div class="info-item-1">头文件和定义12345678910111213#include &lt;iostream&gt;#include &lt;assert.h&gt;#include &lt;string&gt;//#include &quot;SeqQueue.h&quot;//#include &quot;LinkStack.h&quot;using namespace std;#define INFINITY 1000000struct Graph&#123;	int vCount,eCount;	string *vers;	int **matrix;	bool isDirect,isHaveWeight;&#125;;  搜索顶点12345678//search vertexint GraphLocate(Graph g,string v)&#123;	for(int i=0;i&lt;g.vCount;i++)		if(g.vers[i]==v)			return i;	return...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div><div class="comment-switch"><span class="first-comment">Utterances</span><span id="switch-btn"></span><span class="second-comment">Waline</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/Avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Prslc</div><div class="author-info-description">A software engineering student</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/prstest"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Welcome to my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%8F%E5%B7%AE%E5%92%8C%E6%96%B9%E5%B7%AE"><span class="toc-number">1.</span> <span class="toc-text">偏差和方差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-number">2.</span> <span class="toc-text">神经网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="toc-number">2.1.</span> <span class="toc-text">反向传播</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">机器学习方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">大数据的计算模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E5%BC%8F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-number">4.1.</span> <span class="toc-text">流式大数据的特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E5%BC%8F%E8%AE%A1%E7%AE%97%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF"><span class="toc-number">4.2.</span> <span class="toc-text">流式计算关键技术</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-number">5.</span> <span class="toc-text">机器学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE"><span class="toc-number">5.1.</span> <span class="toc-text">数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0"><span class="toc-number">5.2.</span> <span class="toc-text">学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-number">5.3.</span> <span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%B5%81%E7%A8%8B"><span class="toc-number">5.4.</span> <span class="toc-text">机器学习流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">简答题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/20/ApatchKPM/" title="从安装Apatch到嵌入KPM"><img src="/2024/08/20/ApatchKPM/top-img.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从安装Apatch到嵌入KPM"/></a><div class="content"><a class="title" href="/2024/08/20/ApatchKPM/" title="从安装Apatch到嵌入KPM">从安装Apatch到嵌入KPM</a><time datetime="2024-08-20T10:15:51.000Z" title="Created 2024-08-20 18:15:51">2024-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/19/Windows_pagefile/" title="修改Windows分页文件"><img src="/2024/08/19/Windows_pagefile/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="修改Windows分页文件"/></a><div class="content"><a class="title" href="/2024/08/19/Windows_pagefile/" title="修改Windows分页文件">修改Windows分页文件</a><time datetime="2024-08-19T08:11:27.000Z" title="Created 2024-08-19 16:11:27">2024-08-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%8D%E4%B9%A0/" title="人工智能（复习）">人工智能（复习）</a><time datetime="2024-06-17T15:57:02.000Z" title="Created 2024-06-17 23:57:02">2024-06-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/08/Graph/" title="图论（代码）">图论（代码）</a><time datetime="2024-05-08T12:05:14.000Z" title="Created 2024-05-08 20:05:14">2024-05-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/02/Discrete-mathematics/" title="离散数学（复习）">离散数学（复习）</a><time datetime="2024-04-02T08:57:52.000Z" title="Created 2024-04-02 16:57:52">2024-04-02</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Prslc</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.2.2"></script><script src="/js/main.js?v=5.2.2"></script><div class="js-pjax"><script>(() => {
   const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
   const option = null
   const getUtterancesTheme = theme => theme === 'dark' ? 'dark-blue' : 'github-light'
@@ -429,7 +425,7 @@
       crossorigin: 'anonymous',
       async: true,
       ...option,
-      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'title'
     }
 
     const ele = document.createElement('script')
